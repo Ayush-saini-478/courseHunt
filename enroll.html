@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll in Course</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .enroll-container {
+            background: white;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 350px;
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        .course-name {
+            font-weight: bold;
+            color: #ff9800;
+            margin-bottom: 15px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #ff9800;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #e68900;
+        }
+    </style>
+</head>
+<body>
+    <div class="enroll-container">
+        <h2>Enroll in <span class="course-name">Course</span></h2>
+        <form id="enroll-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <button type="submit">Enroll Now</button>
+        </form>
+    </div>
+
+    <script>
+        // Extract course name from URL
+        const params = new URLSearchParams(window.location.search);
+        const courseName = params.get('course');
+        document.querySelector('.course-name').textContent = courseName || 'Course';
+
+        // Handle form submission
+        document.getElementById('enroll-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert(`Thank you for enrolling in ${courseName}!`);
+        });
+    </script>
+</body>
+</html>

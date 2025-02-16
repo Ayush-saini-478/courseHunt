@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="main_box">
+
+
+        <input type="checkbox" id="check" />
+        <span class="btn_one">
+            <label for="check" style="color:white">
+                <i class="fa-solid fa-bars"></i>
+            </label>
+        </span>
+
+        <span class="sidebar_menu">
+            <div class="logo">
+                <a href="#"> Menu </a>
+            </div>
+
+            <div class="btn_two">
+                <label for="check">
+                    <i class="fa-solid fa-xmark"></i>
+                </label>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <a href="login.html">Login/SignUp</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-bell-concierge"></i>
+                        <a href="#services">Services</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="#contact">Contact</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-photo-film"></i>
+                        <a href="#">Exhibits</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <a href="#">Events</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-store"></i>
+                        <a href="#">Store</a>
+                    </li>
+
+                    <li>
+                        <i class="fa-regular fa-comments"></i>
+                        <a href="#">Feedback</a>
+                    </li>
+                </ul>
+                <div class="social_media">
+                    <ul>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </ul>
+                </div>
+            </div>
+
+
+
+        </span>
+        <div class="navbar">
+      
+                <h1>Course Hunt</h1>
+
+          
+            <div class="btn">
+                <button class="nav-btn">English</button>
+                <button class="nav-btn log-btn"><a href="login.html">Login</a></button>
+            </div>
+        </div>
+
+        <span class="para">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores doloribus mollitia architecto cumque
+                sapiente in laborum deleniti odit sunt iste.</p>
+        </span>
+        <section id="home" class="hero">
+            <h2>Welcome to Course Hunt</h2>
+            <p>Accelerate Your Career Growth & Upskill Yourself.</p>
+            <a href="#services" class="cta-button">Explore Our Courses</a>
+        </section>
+
+    </div>
+
+    <section id="services" class="services">
+        <div class="service-section">
+            <h2>Courses Offered</h2>
+        </div>
+        <div class="contents">
+            <div class="card" data-course="data mining">
+                <img src="data mining.jpeg" alt="">
+                <div class="details">
+                    <h3>data mining</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button class="enroll-btn"><a href="enroll.html">Enroll Now</a></button>
+                </div>
+            </div>
+            <div class="card" data-course="Python Programming">
+                <img src="python.jpeg" alt="Course Image">
+                <div class="details">
+                    <h3>Python Programming</h3>
+                    <p>Lorem, ipsum dolor sit amet.</p>
+                    <button class="enroll-btn" onclick="enroll('Python Programming')"><a href="enroll.html">Enroll
+                            Now</a></button>
+                </div>
+            </div>
+            <div class="card" data-course="Data Science">
+                <img src="data science.jpg" alt="Course Image">
+                <div class="details">
+                    <h3>Data Science</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button class="enroll-btn" onclick="enroll('Data Science')"><a href="enroll.html">Enroll
+                            Now</a></button>
+                </div>
+            </div>
+            <div class="card" data-course="Cyber Security">
+                <img src="cyber.jpeg " alt="Course Image">
+                <div class="details">
+                    <h3>Cyber Security</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button class="enroll-btn" onclick="enroll('Cyber Security')"><a href="enroll.html"> Enroll Now
+                        </a></button>
+                </div>
+            </div>
+            <div class="card" data-course="Artificial Intelligence">
+                <img src="artificial.jpeg" alt="Course Image">
+                <div class="details">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button class="enroll-btn" onclick="enroll('Artificial Intelligence')"><a href="enroll.html">Enroll
+                            Now</a></button>
+                </div>
+            </div>
+            
+            <div class="card" data-course="Cloud Computing">
+                <img src="cloud.jpeg" alt="Course Image">
+                <div class="details">
+                    <h3>Cloud Computing</h3>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button class="enroll-btn" onclick="enroll('Cloud Computing')"><a href="enroll.html">Enroll
+                            Now</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>For any quiries, reach us at : CourseHunt.xyz.ac.in</p>
+        <form>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info">
+                <h2 class="company-name">Your Company, Inc.</h2>
+                <p>Making the world a better place through constructing elegant hierarchies.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <div class="heading">
+                        <h4>Solution</h4>
+                    </div>
+                    <ul>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Analytics</a></li>
+                        <li><a href="#">Commerce</a></li>
+                        <li><a href="#">Insights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <div class="heading">
+                        <h4>Support</h4>
+                    </div>
+                    <ul>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">API Status</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <div class="heading">
+                        <h4>Company</h4>
+                    </div>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <div class="heading">
+                        <h4>Legal</h4>
+                    </div>
+                    <ul>
+                        <li><a href="#">Claim</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Course Hunt, Inc. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
